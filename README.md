@@ -205,17 +205,11 @@ pytest tests/test_cache.py -v
 The original 20 categories are editorial labels, not semantic boundaries. BIC analysis and silhouette scores peaked at 25, revealing finer-grained semantic structure:
 - Some original categories split (e.g., computer hardware vs software discussions)
 - Cross-cutting themes emerge (e.g., ethics, humor, technical advice)
+- many times the n clusters was also lower than 20. 
 
 ### Why GMM over K-Means?
 
 K-Means forces hard assignments. A post about "gun control legislation" semantically belongs to both politics AND firearms. GMM provides probability distributions that capture this overlap naturally.
-
-### Why custom cache instead of Redis?
-
-1. **Educational value**: Demonstrates understanding of caching fundamentals
-2. **Cluster-aware indexing**: Standard caches don't leverage semantic structure
-3. **Lightweight**: No separate service to manage
-4. **Semantic similarity**: Traditional caches use exact key matching
 
 ### Cache Threshold Selection
 
