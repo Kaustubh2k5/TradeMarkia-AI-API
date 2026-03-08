@@ -176,34 +176,6 @@ The semantic cache threshold controls the trade-off between precision and recall
 
 See `notebooks/cache_analysis.ipynb` for threshold sensitivity analysis.
 
-## 📁 Project Structure
-
-```
-trademarkia-semantic-search/
-├── app/
-│   ├── main.py              # FastAPI application
-│   ├── models.py            # Pydantic models
-│   ├── cache.py             # Semantic cache implementation
-│   └── vector_db.py         # Vector database wrapper
-├── data/
-│   ├── raw/                 # Downloaded dataset
-│   ├── processed/           # Cleaned documents
-│   └── embeddings/          # FAISS index & models
-├── scripts/
-│   ├── prepare_data.py      # Data preparation pipeline
-│   └── analyze_clusters.py  # Clustering analysis
-├── notebooks/
-│   ├── clustering_analysis.ipynb
-│   └── cache_analysis.ipynb
-├── tests/
-│   ├── test_cache.py
-│   ├── test_api.py
-│   └── test_clustering.py
-├── Dockerfile
-├── docker-compose.yml
-├── requirements.txt
-└── README.md
-```
 
 ## 🧪 Testing
 
